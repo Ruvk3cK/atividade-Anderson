@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Todos os Quadros – IM.3D</title>
+  <script>try{if(localStorage.getItem("im3d_tema")==="light")document.documentElement.dataset.theme="light"}catch(e){}</script>
+  <link rel="stylesheet" href="style.css?v=5">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <nav>
+        <a href="index.html">← Galeria</a>
+        <a href="quiz.html">Catálogo</a>
+        <a href="atelie.html">Linha do Tempo</a>
+      </nav>
+      <div class="canto">
+        <div id="pintores"></div>
+        <button id="tema">☀ Modo claro</button>
+      </div>
+    </header>
+
+    <h1 class="pagina-titulo">Todos os Quadros</h1>
+    <p class="sub">Veja quem pintou cada obra, quando foi feita e os sentimentos que ela transmite.</p>
+
+    <div class="obras-grid" id="lista-quadros"></div>
+  </div>
+
+  <footer>IM.3D © 2026 – galeria inspirada em quadros</footer>
+
+  <script src="dados.js?v=5"></script>
+  <script src="quiz.js?v=5"></script>
+</body>
+</html>
