@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IM.3D – Galeria de Quadros</title>
+<script>try{if(localStorage.getItem("im3d_tema")==="light")document.documentElement.dataset.theme="light"}catch(e){}</script>
+<link rel="stylesheet" href="style.css?v=5">
+</head>
+<body>
+
+<div id="banner">
+  <div class="bbox">
+    <h2 class="bv">Bem-vindo</h2>
+    <div id="bslides"></div>
+    <p style="color:var(--mut); margin-bottom: 14px;">Preencha seu cadastro para entrar no museu:</p>
+    
+    <form id="form-cadastro" style="display:flex; flex-direction:column; gap:10px; text-align:left; margin-bottom:14px;">
+      <input id="cad-nome" type="text" required placeholder="Seu nome completo" style="font:inherit; color:var(--txt); background:var(--bg); border:1px solid var(--line); border-radius:999px; padding:10px 16px; outline:none;">
+      <input id="cad-email" type="email" required placeholder="Seu e-mail" style="font:inherit; color:var(--txt); background:var(--bg); border:1px solid var(--line); border-radius:999px; padding:10px 16px; outline:none;">
+      <p id="cad-erro" style="color:#f87171; font-size:13px; margin:0; display:none; text-align:center;">Por favor, preencha nome e e-mail.</p>
+      <button type="submit" id="fechar" style="background:linear-gradient(90deg,var(--acc),var(--acc2)); color:#fff; border:0; padding:12px; font-weight:bold; margin-top:4px;">Entrar na galeria</button>
+    </form>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <header>
+    <nav>
+      <a href="#quadros">Sobre</a>
+      <a href="#quadros">Quadros</a>
+      <a href="#tarefas">Tarefas</a>
+      <a href="quiz.html">Catálogo</a>
+      <a href="atelie.html">Linha do Tempo</a>
+    </nav>
+    <div class="canto">
+      <span id="visitante-info" style="font-size:14px; color:var(--gold); font-weight:bold;"></span>
+      <div id="pintores"></div>
+      <button id="tema">☀ Modo claro</button>
+    </div>
+  </header>
+
+  <div class="expo" id="expo"></div>
+
+  <div class="time">
+    <div class="pts" id="pts"></div>
+  </div>
+
+  <h2 id="quadros">Quadros
+    <small style="font-size:14px;color:var(--mut)">– escolha pelas linhas em pé</small>
+  </h2>
+
+  <div class="carousel">
+    <div id="track"></div>
+    <div class="bars" id="bars"></div>
+  </div>
+
+  <h2 id="oquadro">O quadro</h2>
+  <div class="detail">
+    <div class="big" id="big"></div>
+    <div>
+      <span class="artist" id="dArt"></span>
+      <h3 id="dTit"></h3>
+      <p id="dTxt"></p>
+    </div>
+  </div>
+
+  <h2>Informação do quadro</h2>
+  <div class="detail info" style="grid-template-columns:1fr">
+    <ul id="dInfo"></ul>
+  </div>
+
+  <h2 id="explorar">Explore mais</h2>
+  <div class="cartoes">
+    <a class="cartao" href="quiz.html">
+      <span class="artist">Catálogo</span>
+      <h3>Todos os Quadros</h3>
+      <p>Veja a lista completa dos quadros, seus autores, datas e o que cada obra transmite.</p>
+    </a>
+    <a class="cartao" href="atelie.html">
+      <span class="artist">Cronologia</span>
+      <h3>Linha do Tempo</h3>
+      <p>Acompanhe a ordem cronológica em que cada quadro da galeria foi pintado.</p>
+    </a>
+  </div>
+
+  <h2 id="tarefas">Lista de tarefas
+    <small id="tContador" style="font-size:14px;color:var(--mut)"></small>
+  </h2>
+  <div class="todo">
+    <div id="tForm">
+      <input id="tInput" type="text" maxlength="80" placeholder="Ex.: acordar cedo" aria-label="Nova tarefa">
+      <button id="tAdd" type="button">Adicionar</button>
+    </div>
+    <ul id="tLista"></ul>
+    <p id="tVazio" class="vazio">Nenhuma tarefa por enquanto. Escreva uma acima!</p>
+    <button id="tLimpar" type="button" class="limpar" hidden>Apagar concluídas</button>
+  </div>
+
+</div>
+
+<footer>IM.3D © 2026 – galeria inspirada em quadros</footer>
+
+<div id="ia">
+  <div id="fala"></div>
+  <button id="iaBtn">✦ IA dos pintores</button>
+</div>
+
+<script src="dados.js?v=5"></script>
+<script src="script.js?v=5"></script>
+</body>
+</html>
